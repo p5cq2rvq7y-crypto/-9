@@ -1,0 +1,165 @@
+:root{
+  --card-bg: #fff8fb;  
+  --page-bg: #ffffff;
+  --text: #333;
+  --muted-border: #bbb;
+  --accent-start: #ff7f50;
+  --accent-end: #ff6347;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--page-bg);
+    padding: 30px;
+    color: var(--text);
+    transition: background .25s, color .25s;
+}
+
+body.dark {
+    --page-bg: #121212;
+    --card-bg: #1f1f1f;
+    --text: #eaeaea;
+    --muted-border: #555;
+    --accent-start: #6b4bff;
+    --accent-end: #3a2eff;
+}
+
+#logoBox {
+    text-align: center;
+    margin-bottom: 12px;
+}
+#logoBox img {
+    width: 90px;
+    margin-bottom: 6px;
+}
+
+.wrapper {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 22px;
+    max-width: 640px;
+    margin: 20px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    transition: background .25s, color .25s, box-shadow .25s;
+}
+
+.wrapper h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: var(--text);
+    font-size: 24px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+input, select, textarea {
+    width: 95%;                     
+    padding: 8px 10px;              
+    font-size: 15px;
+    border: 1px solid var(--muted-border);
+    border-radius: 8px;
+    transition: .2s;
+    background: white;
+    color: inherit;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background: #2a2a2a;
+    border-color: #555;
+    color: #eee;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: rgba(106,166,255,0.9);
+    box-shadow: 0 0 6px rgba(106,166,255,0.18);
+}
+
+.error {
+    color: #d9534f;
+    font-size: 13px;
+    min-height: 16px;
+    padding-top: 4px;
+}
+
+button, #cakeBtn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--accent-start); 
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform .12s, box-shadow .12s;
+}
+
+body.dark button, 
+body.dark #cakeBtn {
+    background: #5c1e1e;
+}
+
+button:hover, #cakeBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+#output {
+    margin-top: 16px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #e8ffe8;
+    color: #0e7a0e;
+    border: 1px solid #9cd89c;
+}
+
+.actionBtn {
+    width: 320px;
+    margin: 14px auto;
+    padding: 12px;
+    text-align: center;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .15s;
+}
+.actionBtn:hover { transform: scale(1.03); }
+
+body.dark .actionBtn {
+    background: #292929;
+    border-color: #555;
+    color: #eee;
+}
+
+@media (max-width:700px){
+  .actionBtn{ width: 90%; }
+  .wrapper{ margin: 14px; padding:16px; }
+  input, textarea, select{ width: 100%; }
+}
+
+#callbackOutput {
+    margin-top: 16px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #e8ffe8;
+    color: #0e7a0e;
+    border: 1px solid #9cd89c;
+}

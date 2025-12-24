@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ торта</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<div id="logoBox">
+    <img src="тортик1.jpg" alt="cake logo">
+    <h1>Сервис заказа торта</h1>
+</div>
+
+
+<section class="wrapper">
+    <h2>Заказать торт</h2>
+
+    <form id="cakeForm" novalidate>
+        <label>
+            Ваше имя:
+            <input type="text" id="cakeName">
+            <span class="error" id="cakeNameError"></span>
+        </label>
+
+        <label>
+            Вес торта (кг):
+            <input type="text" id="cakeWeight">
+            <span class="error" id="cakeWeightError"></span>
+        </label>
+
+        <label>
+            Начинка:
+            <select id="cakeFill">
+                <option value="">Выберите начинку…</option>
+                <option>Шоколад</option>
+                <option>Карамель</option>
+                <option>Вишня</option>
+                <option>Сникерс</option>
+            </select>
+            <span class="error" id="cakeFillError"></span>
+        </label>
+
+        <label>
+            Телефон:
+            <input type="text" id="cakePhone" placeholder="+7 (___) ___-__-__">
+            <span class="error" id="cakePhoneError"></span>
+        </label>
+
+        <label>
+            Дата доставки:
+            <input type="date" id="cakeDate">
+        </label>
+
+        <label>
+            Время доставки:
+            <input type="time" id="cakeTime">
+        </label>
+
+        <label>
+            Комментарий к заказу:
+            <textarea id="cakeComment" placeholder="Аллергии, пожелания..."></textarea>
+        </label>
+
+        <button type="button" id="cakeBtn">Оформить заказ</button>
+    </form>
+
+    <div id="output" style="display:none;"></div>
+</section>
+
+
+<section class="wrapper">
+    <h2>Обратный звонок</h2>
+
+    <form id="callbackForm">
+        <label>
+            Имя*
+            <input type="text" name="cbName" required minlength="2" maxlength="20" autocomplete="name">
+        </label>
+
+        <label>
+            Телефон*
+            <input type="tel" id="callbackPhone" name="cbPhone" required
+                   placeholder="+7 (___) ___-__-__" autocomplete="tel">
+        </label>
+
+        <label>
+            E-mail
+            <input type="email" name="cbMail" autocomplete="email">
+        </label>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <div id="callbackOutput" style="display:none;"></div>
+</section>
+
+<div id="changeButtonColor" class="actionBtn">Изменить цвет всех кнопок</div>
+<div id="toggleTheme" class="actionBtn">Тёмная тема</div>
+
+</body>
+</html>
